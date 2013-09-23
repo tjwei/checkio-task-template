@@ -1,7 +1,7 @@
 # Return the first and the last letter of checkio in the word map.
 def checkio(map):
 
-    return None
+    return [[0,0], [0,0]]
 
 #These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':
