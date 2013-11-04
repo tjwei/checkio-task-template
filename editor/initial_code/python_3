@@ -1,5 +1,5 @@
 # Return the solution of the sudoku.
-def checkio(map):
+def checkio(grid):
     # Insert your code here.
     return [[0 for j in range(9)] for i in range(9)]
 
