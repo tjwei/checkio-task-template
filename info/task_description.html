@@ -13,27 +13,36 @@
 
 <p><i>( Explain input and output values )</i></p>
 <p>
-    <strong>Input: </strong> Two arguments. Both are int
+    <strong>Input: </strong> The initial grid 9x9 composed by integers. A zero value means that the value wasn't already found.
 </p>
 
 <p>
-    <strong>Output: </strong> Int. 
+    <strong>Output: </strong> Return the result of the sudoku (9x9 grid). 
 </p>
 
 
 
 <div class="for_info_only">
-    <p><i>( Put some usage examples )</i></p>
     <p>
         <strong>Example:</strong>
     </p>
     <pre class="brush: python">
-checkio(3, 2) == 5
-checkio(5, 7) == 12
+    checkio([[5, 0, 0, 7, 1, 9, 0, 0, 4], 
+                    [0, 0, 1, 0, 3, 0, 5, 0, 0], 
+                    [0, 0, 0, 0, 0, 0, 0, 0, 0], 
+                    [0, 8, 5, 9, 7, 2, 6, 4, 0], 
+                    [0, 0, 0, 6, 0, 1, 0, 0, 0], 
+                    [0, 2, 6, 3, 8, 5, 9, 1, 0], 
+                    [0, 0, 0, 0, 0, 0, 0, 0, 0], 
+                    [0, 0, 3, 0, 5, 0, 2, 0, 0], 
+                    [8, 0, 0, 4, 9, 7, 0, 0, 6]]) == [[5, 6, 8, 7, 1, 9, 3, 2, 4], 
+                                                      [9, 7, 1, 2, 3, 4, 5, 6, 8], 
+                                                      [2, 3, 4, 5, 6, 8, 7, 9, 1], 
+                                                      [1, 8, 5, 9, 7, 2, 6, 4, 3], 
+                                                      [3, 9, 7, 6, 4, 1, 8, 5, 2], 
+                                                      [4, 2, 6, 3, 8, 5, 9, 1, 7], 
+                                                      [6, 1, 9, 8, 2, 3, 4, 7, 5], 
+                                                      [7, 4, 3, 1, 5, 6, 2, 8, 9], 
+                                                      [8, 5, 2, 4, 9, 7, 1, 3, 6]], "First"
     </pre>
 </div>
-
-<p class="for_info_only">
-    <strong>How it is used: </strong>
-    <i>(Here you can explain how it can be used in development and what is usage of this.)</i>
-</p>
