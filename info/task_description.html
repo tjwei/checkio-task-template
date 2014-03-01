@@ -1,9 +1,11 @@
 <p>
-    <i>( Describe task in general )</i>
+    <i>( Highlighting words in text )</i>
 </p>
 
 <p>
-    Sum two passed ints
+    You are given a text and string with key words (or parts of words), separated by spaces. You need to find all key words,
+    ignoring upper or lower cases and put these words into "<span></span>" wrappers for highlighting.
+    All letters cases should be kept.
 </p>
 
 <p style="text-align: center;">
@@ -11,29 +13,34 @@
     <img class="for_editor_only" title="example" src="{{MEDIA}}example.png" alt="example" width="380px"/>
 </p>
 
-<p><i>( Explain input and output values )</i></p>
 <p>
-    <strong>Input: </strong> Two arguments. Both are int
+    <strong>Input: </strong> Two arguments. Both are strings
 </p>
 
 <p>
-    <strong>Output: </strong> Int. 
+    <strong>Output: </strong> String with replaced key words. 
 </p>
 
 
 
 <div class="for_info_only">
-    <p><i>( Put some usage examples )</i></p>
+
     <p>
         <strong>Example:</strong>
     </p>
     <pre class="brush: python">
-checkio(3, 2) == 5
-checkio(5, 7) == 12
+assert(checkio("This is only a text example for task example.", "example") == 
+        "This is only a text <span>example</span> for task <span>example</span>."), "Simple test"
+assert(checkio("Python is a widely used general-purpose, high-level programming language.", "PyThoN") ==
+        "<span>Python</span> is a widely used general-purpose, high-level programming language."), "Ignore letters cases"
+assert(checkio("It is desirable to replicate a randomized experiment as closely as possible by obtaining \
+                treated and control groups with similar covariate distributions.", "is im") ==
+        "It <span>is</span> desirable to replicate a randomized exper<span>im</span>ent as closely as possible by obtaining 
+         treated and control groups with s<span>im</span>ilar covariate d<span>is</span>tributions."), "Several subwords"
     </pre>
 </div>
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    <i>(Here you can explain how it can be used in development and what is usage of this.)</i>
+    <i>Searching machines.</i>
 </p>
