@@ -19,22 +19,20 @@
 
 
 
+<p>
+    <strong>Example:</strong>
+</p>
 <div class="for_info_only">
-
-    <p>
-        <strong>Example:</strong>
-    </p>
     <pre class="brush: python">
 assert(checkio("This is only a text example for task example.", "example") == 
         "This is only a text <span>example</span> for task <span>example</span>."), "Simple test"
 
-assert(checkio("Python is a widely used general-purpose, high-level programming language.", "PyThoN") ==
-        "<span>Python</span> is a widely used general-purpose, high-level programming language."), "Ignore letters cases"
+assert(checkio("Python is a widely used high-level programming language.", "pyThoN") ==
+        "<span>Python</span> is a widely used high-level programming language."), "Ignore letters cases"
 
-assert(checkio("""It is desirable to replicate a randomized experiment as closely as possible 
-by obtaining treated and control groups with similar covariate distributions.""", "is im") ==
-        """It <span>is</span> desirable to replicate a randomized exper<span>im</span>ent as closely as possible
-by obtaining treated and control groups with s<span>im</span>ilar covariate d<span>is</span>tributions."""), "Several subwords"
+assert(checkio("It is experiment for control groups with similar distributions.""", "is im") ==
+        "It <span>is</span> exper<span>im</span>ent for control groups with s<span>im</span>ilar d<span>is</span>tributions."),
+        "Several subwords"
     </pre>
 </div>
 
