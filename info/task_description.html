@@ -1,23 +1,21 @@
 <p>
-    You are given a text and a string with key words (or parts of words), separated by spaces. You need to find all key words,
-    ignoring upper or lower cases and put these words into "<span></span>" wrappers for highlighting.
-    All letters cases should be kept.
-</p>
-
-<p style="text-align: center;">
-    <img class="for_info_only" title="example" src="{{MEDIA}}example.png" alt="example" width="392px"/>
-    <img class="for_editor_only" title="example" src="{{MEDIA}}example.png" alt="example" width="380px"/>
+    Sophi found many books and she wants to find information about ancients who lived on the islands.
+    But she has not the text searching module and we could help her. Let's write the program to search words on the text pages.
 </p>
 
 <p>
-    <strong>Input: </strong> Two arguments. Both are strings
+    You are given a text and a string with key words (or parts of words, or letters), separated by spaces (one, two or more).
+    You need to find all key words and put these words into "&lt;span&gt;&lt;/span&gt;" wrappers for highlighting.
+    Ignore upper or lower cases for the key words, but the original letters cases in the text should be kept.
 </p>
 
 <p>
-    <strong>Output: </strong> String with replaced key words. 
+    <strong>Input: </strong> Two arguments. A text and key words as strings.
 </p>
 
-
+<p>
+    <strong>Output: </strong> The text with wrapped key words.
+</p>
 
 <p>
     <strong>Example:</strong>
@@ -28,15 +26,18 @@ assert(checkio("This is only a text example for task example.", "example") ==
         "This is only a text <span>example</span> for task <span>example</span>."), "Simple test"
 
 assert(checkio("Python is a widely used high-level programming language.", "pyThoN") ==
-        "<span>Python</span> is a widely used high-level programming language."), "Ignore letters cases"
+        "<span>Python</span> is a widely used high-level programming language."), "Ignore letters cases, but keep original"
 
 assert(checkio("It is experiment for control groups with similar distributions.""", "is im") ==
         "It <span>is</span> exper<span>im</span>ent for control groups with s<span>im</span>ilar d<span>is</span>tributions."),
         "Several subwords"
+
     </pre>
 </div>
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    <i>Searching machines.</i>
+    You see this task every day when use your browser or work with documents.
+    Every time when you search something on the page and want to see the found fragments as highlighted parts, you run this task.
+    This problem can be more complex if you use it for the languages where you should write "lowercase" rules.
 </p>
