@@ -1,12 +1,13 @@
 <p>
     Sophi found many books and she wants to find information about ancients who lived on the islands.
-    But she has not the text searching module and we could help her. Let's write the program to search words on the text pages.
+    But she has not the text searching module and we could help she. Let's write the program to search words on the text pages.
 </p>
 
 <p>
-    You are given a text and a string with key words (or parts of words, or letters), separated by spaces (one, two or more).
-    You need to find all key words and put these words into "&lt;span&gt;&lt;/span&gt;" wrappers for highlighting.
+    You are given a plain text (without tags) and a string with key words (or parts of words, or letters), separated by spaces (one, two or more).
+    You need to find all key words and put these words into "<strong>&lt;span&gt;&lt;/span&gt;</strong>" wrappers for highlighting.
     Ignore upper or lower cases for the key words, but the original letters cases in the text should be kept.
+    Key words are unique, they don't contain or intersect each other. There are no words like "hello or" or "world wor".
 </p>
 
 <p>
@@ -44,4 +45,10 @@ checkio("Did you find anything?", "word space tree") ==
     You see this task every day when use your browser or work with documents.
     Every time when you search something on the page and want to see the found fragments as highlighted parts, you run this task.
     This problem can be more complex if you use it for the languages where you should write "lowercase" rules.
+</p>
+
+<p>
+    <strong>Precondition: </strong> Key words are unique, they don't contain or intersect each other.<br>
+    0 < |text| < 5000<br>
+    0 < |the number of key words| < 30
 </p>

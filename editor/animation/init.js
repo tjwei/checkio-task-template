@@ -40,6 +40,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             }
 
             var checkioInput = data.in;
+            var checkioInputStr = JSON.stringify(checkioInput).replace(/\[/g, "(").replace(/\]/g, ")");
 
             if (data.error) {
                 $content.find('.call').html('Fail: checkio(' + JSON.stringify(checkioInput) + ')');
@@ -55,6 +56,15 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
 
             var rightResult = data.ext["answer"];
             var userResult = data.out;
+
+            if (typeof userResult === "string") {
+                var userResultEscaped = '"' + userResult.replace(/<span>/g, "&lt;span&gt;").replace(/<\/span>/g, "&lt;/span&gt;") + '"';
+            }
+            else {
+                userResultEscaped = JSON.stringify(userResult);
+            }
+            var rightResultEscaped = rightResult.replace(/<span>/g, "&lt;span&gt;").replace(/<\/span>/g, "&lt;/span&gt;");
+
             var result = data.ext["result"];
             var result_addon = data.ext["result_addon"];
 
@@ -62,17 +72,17 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             //if you need additional info from tests (if exists)
             var explanation = data.ext["explanation"];
 
-            $content.find('.output').html('&nbsp;Your result:&nbsp;' + JSON.stringify(userResult));
+            $content.find('.output').html('&nbsp;Your result:&nbsp;' + userResultEscaped);
 
             if (!result) {
-                $content.find('.call').html('Fail: checkio(' + JSON.stringify(checkioInput) + ')');
-                $content.find('.answer').html('Right result:&nbsp;' + JSON.stringify(rightResult));
+                $content.find('.call').html('Fail: checkio(' + checkioInputStr + ')');
+                $content.find('.answer').html('Right result:&nbsp;' + JSON.stringify(rightResultEscaped));
                 $content.find('.answer').addClass('error');
                 $content.find('.output').addClass('error');
                 $content.find('.call').addClass('error');
             }
             else {
-                $content.find('.call').html('Pass: checkio(' + JSON.stringify(checkioInput) + ')');
+                $content.find('.call').html('Pass: checkio(' + checkioInputStr + ')');
                 $content.find('.answer').remove();
             }
             //Dont change the code before it
