@@ -18,3 +18,8 @@ if __name__ == '__main__':
     assert (checkio("Did you find anything?", "word space tree") ==
             "Did you find anything?"), "No comments"
 
+    assert (checkio("Hello World! Or LOL", "hell world or lo") ==
+            "<span>Hello</span> <span>World</span>! <span>Or</span> <span>LO</span>L"), "Contain or intersect"
+
+
+
