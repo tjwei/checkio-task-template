@@ -31,8 +31,8 @@ def prod(l):
     return r
 def f(l,n):
     return max(prod(l[i:i+n]) for i in range(len(l)-n+1))
-for i in range(3):
+for i in range(0):
      n = randint(2,10)
-     l = [randint(1, 100) for x in range(10**3)]
+     l = [randint(1, 100) for x in range(100)]
      TESTS["Extra"].append({"input": (l,n), "answer": f(l,n)}) 
 
