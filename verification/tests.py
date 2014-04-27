@@ -22,7 +22,6 @@ TESTS = {
         }
     ],
 }
-"""
 from random import randint
 def prod(l):
     r = 1
@@ -31,8 +30,7 @@ def prod(l):
     return r
 def f(l,n):
     return max(prod(l[i:i+n]) for i in range(len(l)-n+1))
-for i in range(0):
+for i in range(10):
      n = randint(2,10)
-     l = [randint(1, 100) for x in range(100)]
+     l = [randint(1, 100) for x in range(10000)]
      TESTS["Extra"].append({"input": (l,n), "answer": f(l,n)}) 
-"""
