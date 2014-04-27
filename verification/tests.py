@@ -25,7 +25,10 @@ TESTS = {
 }
 from random import randint
 def prod(l):
-    return reduce( lambda a,b:a*b, l, 1)
+    rtn = 1
+    for x in l:
+        r*=l
+    return l
 def f(l,n):
     return max(prod(l[i:i+n]) for i in range(len(l)-n+1))
 for i in range(3):
