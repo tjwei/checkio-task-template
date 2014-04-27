@@ -21,6 +21,7 @@ TESTS = {
             "explanation": "5*7*1=?"
         }
     ],
+    "Extra": []
 }
 from random import randint
 def prod(l):
@@ -34,3 +35,4 @@ for i in range(10):
      n = randint(2,10)
      l = [randint(1, 100) for x in range(10000)]
      TESTS["Extra"].append({"input": (l,n), "answer": f(l,n)}) 
+
