@@ -21,7 +21,8 @@ TESTS = {
             "explanation": "5*7*1=?"
         }
     ],
-    "Extra": []
+    "Small":[],
+    "Big": []
 }
 from random import randint
 def prod(l):
@@ -31,8 +32,12 @@ def prod(l):
     return r
 def f(l,n):
     return max(prod(l[i:i+n]) for i in range(len(l)-n+1))
+for i in range(100):
+     n = randint(2,10)
+     l = [randint(1, 100) for x in range(100)]
+     TESTS["Small"].append({"input": (l,n), "answer": f(l,n)}) 
 for i in range(10):
      n = randint(2,10)
      l = [randint(1, 100) for x in range(10**4)]
-     TESTS["Extra"].append({"input": (l,n), "answer": f(l,n)}) 
+     TESTS["Big"].append({"input": (l,n), "answer": f(l,n)}) 
 
