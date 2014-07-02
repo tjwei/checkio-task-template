@@ -1,16 +1,22 @@
 <p>
-    <i> Find the greatest product of n (the 2nd argument) in a consecutive series for the given list l (the 1st
-        argument). For example: given n=2 and l=[1,2,3,5,1,6,1], the corresponding consecutive series are [1,2], [2,3],
-        [3,5], [5,1], [1,6], [6,1], their products are 2, 6, 15, 5, 6, 6. The final result is 15.
-    </i>
+    You are given an array of positive integers and a number (<strong>n</strong>).
+    Try to find the greatest possible product of <strong>n</strong> elements in a consecutive series
+    for the given array.
+</p>
+<p>
+    For example: array=[1,2,3,5,1,6,1] and n=2.
+    The corresponding consecutive series are [1,2], [2,3],
+    [3,5], [5,1], [1,6], [6,1], their products are 2, 6, 15, 5, 6, 6.
+    The final result is 15.
+
 </p>
 
 <p>
-    <strong>Input: </strong> A list of Int and an Int.
+    <strong>Input: </strong> Two arguments. An array as a list of integers and a number <strong>n</strong> as an integer.
 </p>
 
 <p>
-    <strong>Output: </strong> Int.
+    <strong>Output: </strong> The greatest possible product as an integer.
 </p>
 
 
@@ -19,14 +25,21 @@
         <strong>Example:</strong>
     </p>
     <pre class="brush: python">
-    assert checkio([1,2,3,5,1,6,1], 2) == 15
-    assert checkio([1,3,4,5,2,6,7,2], 3) == 84
+checkio([1, 2, 3, 5, 1, 6, 1], 2) == 15
+checkio([1, 3, 4, 5, 2, 6, 7, 2], 3) == 84
     </pre>
 </div>
 
-<p>
-    <strong>Precondition:</strong>
 
-    <i>There is no catch at all. The list is not empty and elements in the list are positive integers. The size of the
-        list might be large (around 10**6 maybe) but not super-large.</i>
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    This a simple exercise for working with a consecutive data types.
+</p>
+
+<p>
+    <strong>Precondition:</strong><br>
+    0 &lt; len(array) &le; 10<sup>4</sup><br>
+    1 &le; n &le; 10<br>
+    n &le; len(array)
+    all(1 &le; x &lt; 100 for x in array)
 </p>
